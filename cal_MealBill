@@ -1,0 +1,20 @@
+<?php
+
+
+class MealBill {
+    public $rice;
+    public $vegetable;
+    public $fish;
+    public $meat;
+    public $vat;
+    public function getGrossTotal(){
+
+$grossTotal=$this->rice*20+$this->vegetable*30+$this->fish*80+$this->meat*120;
+        return $grossTotal;
+    }
+    public function getTotalAmount(){
+        return (($this->getGrossTotal()*$this->vat)/100)+$this->getGrossTotal();
+
+    }
+
+} 
